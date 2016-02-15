@@ -2333,11 +2333,11 @@ These rules have been curated by SparkFuns DFM commitee. After doing much resear
 <wire x1="8.89" y1="11.684" x2="8.89" y2="7.62" width="0.8128" layer="16"/>
 <wire x1="8.89" y1="7.62" x2="8.89" y2="1.27" width="0.8128" layer="16"/>
 <via x="8.89" y="7.62" extent="1-16" drill="0.381"/>
-<wire x1="16.19" y1="8.8599" x2="16.19" y2="9.972" width="0.254" layer="1"/>
-<wire x1="16.129" y1="10.033" x2="14.478" y2="10.033" width="0.254" layer="1"/>
+<wire x1="16.19" y1="8.8599" x2="16.19" y2="9.845" width="0.254" layer="1"/>
+<wire x1="16.002" y1="10.033" x2="14.478" y2="10.033" width="0.254" layer="1"/>
 <wire x1="14.478" y1="10.033" x2="14.29" y2="9.845" width="0.254" layer="1"/>
 <wire x1="14.29" y1="8.8599" x2="14.29" y2="9.845" width="0.254" layer="1"/>
-<wire x1="16.19" y1="9.972" x2="16.129" y2="10.033" width="0.254" layer="1"/>
+<wire x1="16.19" y1="9.845" x2="16.002" y2="10.033" width="0.254" layer="1"/>
 <contactref element="R2" pad="1"/>
 <wire x1="8.89" y1="7.62" x2="10.541" y2="7.62" width="0.508" layer="1"/>
 <wire x1="10.541" y1="7.62" x2="10.795" y2="7.366" width="0.508" layer="1"/>
