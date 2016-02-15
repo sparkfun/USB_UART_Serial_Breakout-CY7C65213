@@ -2206,7 +2206,7 @@ These rules have been curated by SparkFuns DFM commitee. After doing much resear
 <attribute name="PROD_ID" value="DIO-10955" x="19.685" y="6.35" size="1.778" layer="27" display="off"/>
 </element>
 <element name="FRAME1" library="SparkFun-Aesthetics" package="CREATIVE_COMMONS" value="FRAME-LETTER" x="24.13" y="-17.78"/>
-<element name="J1" library="SparkFun-Connectors" package="USB-B-MICRO-SMD_V03" value="" x="2.032" y="10.16">
+<element name="J1" library="SparkFun-Connectors" package="USB-B-MICRO-SMD_V03" value="MICROB" x="2.032" y="10.16">
 <attribute name="PROD_ID" value="CONN-11752" x="2.032" y="10.16" size="1.778" layer="27" display="off"/>
 </element>
 <element name="J2" library="SparkFun-Connectors" package="1X02" value="" x="11.43" y="8.89" rot="R90"/>
@@ -2233,7 +2233,6 @@ These rules have been curated by SparkFuns DFM commitee. After doing much resear
 <element name="LOGO1" library="SparkFun-Aesthetics" package="SFE_LOGO_NAME_FLAME_.1" value="SFE_LOGO_NAME_FLAME.1_INCH" x="26.924" y="8.255" rot="MR0"/>
 <element name="FD1" library="SparkFun-Aesthetics" package="MICRO-FIDUCIAL" value="FIDUCIALUFIDUCIAL" x="5.08" y="1.27"/>
 <element name="FD2" library="SparkFun-Aesthetics" package="MICRO-FIDUCIAL" value="FIDUCIALUFIDUCIAL" x="39.37" y="19.05"/>
-<element name="LOGO4" library="SparkFun-Aesthetics" package="OSHW-LOGO-S" value="OSHW-LOGOS" x="2.54" y="1.905" rot="MR0"/>
 <element name="LOGO5" library="SparkFun-Aesthetics" package="SFE_LOGO_FLAME_.2" value="SFE_LOGO_FLAME.2_INCH" x="6.223" y="10.287"/>
 <element name="D4" library="SparkFun-DiscreteSemi" package="SOD-323" value="5.6V" x="7.62" y="6.35" rot="R180">
 <attribute name="PROD_ID" value="DIO-12442" x="7.62" y="6.35" size="0.8128" layer="27" font="vector" ratio="15" rot="R180" display="off"/>
@@ -2253,6 +2252,7 @@ These rules have been curated by SparkFuns DFM commitee. After doing much resear
 <element name="C6" library="SparkFun-Capacitors" package="1206-CAP" value="4.7uF" x="3.175" y="3.81" rot="R180">
 <attribute name="PROD_ID" value="CAP-10300" x="3.175" y="7.62" size="0.8128" layer="27" font="vector" ratio="15" rot="R180" display="off"/>
 </element>
+<element name="LOGO2" library="SparkFun-Aesthetics" package="OSHW-LOGO-S" value="OSHW-LOGOS" x="2.794" y="1.905" rot="MR0"/>
 </elements>
 <signals>
 <signal name="GND">
@@ -2413,9 +2413,9 @@ These rules have been curated by SparkFuns DFM commitee. After doing much resear
 <wire x1="23.368" y1="6.477" x2="31.242" y2="6.477" width="0.8128" layer="16"/>
 <wire x1="13.97" y1="19.05" x2="13.97" y2="17.907" width="0.8128" layer="16"/>
 <wire x1="13.97" y1="17.907" x2="13.589" y2="17.526" width="0.8128" layer="16"/>
-<wire x1="13.589" y1="17.526" x2="5.588" y2="17.526" width="0.8128" layer="16"/>
-<wire x1="5.588" y1="17.526" x2="5.334" y2="17.272" width="0.8128" layer="16"/>
-<wire x1="5.334" y1="17.272" x2="5.334" y2="3.302" width="0.8128" layer="16"/>
+<wire x1="13.589" y1="17.526" x2="5.715" y2="17.526" width="0.8128" layer="16"/>
+<wire x1="5.715" y1="17.526" x2="5.334" y2="17.145" width="0.8128" layer="16"/>
+<wire x1="5.334" y1="17.145" x2="5.334" y2="3.302" width="0.8128" layer="16"/>
 <via x="5.969" y="2.794" extent="1-16" drill="0.381"/>
 <wire x1="5.969" y1="2.794" x2="13.97" y2="2.794" width="0.8128" layer="1"/>
 <wire x1="13.97" y1="2.794" x2="13.97" y2="2.286" width="0.8128" layer="1"/>
