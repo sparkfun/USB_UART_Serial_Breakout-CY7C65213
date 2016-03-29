@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="7.3.0">
+<eagle version="7.5.0">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -16437,6 +16437,26 @@ You are welcome to use this library for commercial purposes. For attribution, we
 </device>
 </devices>
 </deviceset>
+<deviceset name="10KOHM-1/10W-1%(0603)" prefix="R" uservalue="yes">
+<description>RES-00824</description>
+<gates>
+<gate name="G$1" symbol="RESISTOR" x="0" y="0"/>
+</gates>
+<devices>
+<device name="0603" package="0603-RES">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="PROD_ID" value="RES-00824"/>
+<attribute name="VALUE" value="10K" constant="no"/>
+</technology>
+</technologies>
+</device>
+</devices>
+</deviceset>
 <deviceset name="1KOHM-1/10W-1%(0603)" prefix="R" uservalue="yes">
 <description>RES-07856</description>
 <gates>
@@ -19379,11 +19399,13 @@ CY7C65213 USB-UART controller.</description>
 <part name="C6" library="SparkFun-Capacitors" deviceset="4.7UF-16V-20%,+80%-(1206)" device="" value="4.7uF"/>
 <part name="SUPPLY23" library="SparkFun-Aesthetics" deviceset="VCCIO" device=""/>
 <part name="LOGO2" library="SparkFun-Aesthetics" deviceset="OSHW-LOGO" device="S"/>
+<part name="R5" library="SparkFun-Resistors" deviceset="10KOHM-1/10W-1%(0603)" device="0603" value="10K"/>
+<part name="SUPPLY24" library="SparkFun-Aesthetics" deviceset="VCCIO" device=""/>
 </parts>
 <sheets>
 <sheet>
 <plain>
-<text x="237.998" y="6.35" size="3.81" layer="94" font="vector">01</text>
+<text x="237.998" y="6.35" size="3.81" layer="94" font="vector">02</text>
 <text x="154.432" y="6.096" size="3.81" layer="94" font="vector">Mike Hord</text>
 <text x="27.94" y="95.25" size="1.27" layer="97" font="vector">Open JP1 if VIO used 
 to set VCCIO; close JP2
@@ -19406,6 +19428,9 @@ latchup events.</text>
 Use of battery charger
 may cause spikes on 
 5V line.</text>
+<text x="213.36" y="124.46" size="1.27" layer="97" font="vector">Without R5, the RX line tends
+to drift through VIH/VIL 
+and collect spurious data.</text>
 </plain>
 <instances>
 <instance part="FRAME1" gate="G$1" x="0" y="0"/>
@@ -19480,6 +19505,8 @@ may cause spikes on
 <instance part="C6" gate="G$1" x="60.96" y="147.32"/>
 <instance part="SUPPLY23" gate="G$1" x="50.8" y="160.02"/>
 <instance part="LOGO2" gate="G$1" x="132.08" y="10.16"/>
+<instance part="R5" gate="G$1" x="208.28" y="124.46" rot="R90"/>
+<instance part="SUPPLY24" gate="G$1" x="208.28" y="132.08"/>
 </instances>
 <busses>
 </busses>
@@ -19675,6 +19702,11 @@ may cause spikes on
 <pinref part="SUPPLY23" gate="G$1" pin="VCCIO"/>
 <wire x1="50.8" y1="160.02" x2="50.8" y2="157.48" width="0.1524" layer="91"/>
 <junction x="50.8" y="157.48"/>
+</segment>
+<segment>
+<pinref part="SUPPLY24" gate="G$1" pin="VCCIO"/>
+<pinref part="R5" gate="G$1" pin="2"/>
+<wire x1="208.28" y1="132.08" x2="208.28" y2="129.54" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="GPIO6" class="0">
@@ -19982,6 +20014,12 @@ may cause spikes on
 <pinref part="J3" gate="G$1" pin="2"/>
 <wire x1="208.28" y1="66.04" x2="210.82" y2="66.04" width="0.1524" layer="91"/>
 <label x="210.82" y="66.04" size="1.27" layer="95" font="vector" rot="MR180" xref="yes"/>
+</segment>
+<segment>
+<pinref part="R5" gate="G$1" pin="1"/>
+<wire x1="208.28" y1="119.38" x2="208.28" y2="116.84" width="0.1524" layer="91"/>
+<wire x1="208.28" y1="116.84" x2="213.36" y2="116.84" width="0.1524" layer="91"/>
+<label x="213.36" y="116.84" size="1.27" layer="95" xref="yes"/>
 </segment>
 </net>
 <net name="GPIO5" class="0">
