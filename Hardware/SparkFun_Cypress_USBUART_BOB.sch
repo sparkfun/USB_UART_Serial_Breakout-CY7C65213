@@ -152,7 +152,7 @@
 <layer number="254" name="cooling" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="255" name="routoute" color="7" fill="1" visible="yes" active="yes"/>
 </layers>
-<schematic xreflabel="%F%N/%S" xrefpart="1_/%S.%C%R">
+<schematic xreflabel="%F%N/%S" xrefpart="/%S.%C%R">
 <libraries>
 <library name="SparkFun-Aesthetics">
 <description>&lt;h3&gt;SparkFun Electronics' preferred foot prints&lt;/h3&gt;
@@ -16437,26 +16437,6 @@ You are welcome to use this library for commercial purposes. For attribution, we
 </device>
 </devices>
 </deviceset>
-<deviceset name="10KOHM-1/10W-1%(0603)" prefix="R" uservalue="yes">
-<description>RES-00824</description>
-<gates>
-<gate name="G$1" symbol="RESISTOR" x="0" y="0"/>
-</gates>
-<devices>
-<device name="0603" package="0603-RES">
-<connects>
-<connect gate="G$1" pin="1" pad="1"/>
-<connect gate="G$1" pin="2" pad="2"/>
-</connects>
-<technologies>
-<technology name="">
-<attribute name="PROD_ID" value="RES-00824"/>
-<attribute name="VALUE" value="10K" constant="no"/>
-</technology>
-</technologies>
-</device>
-</devices>
-</deviceset>
 <deviceset name="1KOHM-1/10W-1%(0603)" prefix="R" uservalue="yes">
 <description>RES-07856</description>
 <gates>
@@ -16491,6 +16471,26 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <technology name="">
 <attribute name="PROD_ID" value="RES-12570" constant="no"/>
 <attribute name="VALUE" value="15" constant="no"/>
+</technology>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="10KOHM-1/10W-1%(0603)" prefix="R" uservalue="yes">
+<description>RES-00824</description>
+<gates>
+<gate name="G$1" symbol="RESISTOR" x="0" y="0"/>
+</gates>
+<devices>
+<device name="0603" package="0603-RES">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="PROD_ID" value="RES-00824"/>
+<attribute name="VALUE" value="10K" constant="no"/>
 </technology>
 </technologies>
 </device>
@@ -16668,7 +16668,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 </package>
 </packages>
 <symbols>
-<symbol name="V-REG-LDO">
+<symbol name="V-REG-LDO_NO-BP">
 <wire x1="-7.62" y1="-7.62" x2="5.08" y2="-7.62" width="0.4064" layer="94"/>
 <wire x1="5.08" y1="-7.62" x2="5.08" y2="7.62" width="0.4064" layer="94"/>
 <wire x1="5.08" y1="7.62" x2="-7.62" y2="7.62" width="0.4064" layer="94"/>
@@ -16679,44 +16679,48 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <pin name="GND" x="-10.16" y="-5.08" visible="pin" length="short" direction="in"/>
 <pin name="OUT" x="7.62" y="5.08" visible="pin" length="short" direction="pas" rot="R180"/>
 <pin name="EN" x="-10.16" y="0" visible="pin" length="short" direction="in"/>
-<pin name="BP" x="7.62" y="-5.08" visible="pin" length="short" direction="in" rot="R180"/>
+<pin name="NC" x="7.62" y="-5.08" visible="pin" length="short" direction="in" rot="R180"/>
 </symbol>
 </symbols>
 <devicesets>
-<deviceset name="V_REG_MIC5219" prefix="U" uservalue="yes">
-<description>&lt;b&gt;V_REG MIC5219&lt;/b&gt;
-Standard 3.3V and 5V 500mA LDO voltage regulator in SOT-23 layout. Micrel part MIC5219. BP (by-pass) pin is used to lower output noise with 470pF cap, may be left open.</description>
+<deviceset name="V_REG_AP2112" prefix="U">
+<description>&lt;h3&gt;AP2112 - 600mA CMOS LDO Regulator w/ Enable&lt;/h3&gt;
+&lt;p&gt;The AP2112 is CMOS process low dropout linear regulator with enable function, the regulator delivers a guaranteed 600mA (min.) continuous load current.&lt;/p&gt;
+&lt;p&gt;Features&lt;br&gt;
+&lt;ul&gt;
+&lt;li&gt;Output Voltage Accuracy: ±1.5% &lt;/li&gt;
+&lt;li&gt;Output Current: 600mA (Min.) &lt;/li&gt;
+&lt;li&gt;Foldback Short Current Protection: 50mA &lt;/li&gt;
+&lt;li&gt;Enable Function to Turn ON/OFF VOUT&lt;/li&gt;
+&lt;li&gt;Low Dropout Voltage (3.3V): 250mV (Typ.) @IOUT=600mA &lt;/li&gt;
+&lt;li&gt;Excellent Load Regulation: 0.2%/A (Typ.) &lt;/li&gt;
+&lt;li&gt;Excellent Line Regulation: 0.02%/V (Typ.) &lt;/li&gt;
+&lt;li&gt;Low Quiescent Current: 55μA (Typ.)&lt;/li&gt;
+&lt;li&gt;Low Standby Current: 0.01μA (Typ.)&lt;/li&gt;
+&lt;li&gt;Low Output Noise: 50μVRMS &lt;/li&gt;
+&lt;li&gt;PSRR: 100Hz -65dB, 1kHz -65dB &lt;/li&gt;
+&lt;li&gt; OTSD Protection &lt;/li&gt;
+&lt;li&gt;Stable  with  1.0μF Flexible Cap: Ceramic, Tantalum and Aluminum Electrolytic &lt;/li&gt;
+&lt;li&gt;Operation Temperature Range: -40°C to 85°C &lt;/li&gt;
+&lt;li&gt;ESD: MM 400V, HBM 4000V&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/p&gt;</description>
 <gates>
-<gate name="G$1" symbol="V-REG-LDO" x="2.54" y="0"/>
+<gate name="G$1" symbol="V-REG-LDO_NO-BP" x="0" y="0"/>
 </gates>
 <devices>
-<device name="3.3V" package="SOT23-5">
+<device name="K-3.3V" package="SOT23-5">
 <connects>
-<connect gate="G$1" pin="BP" pad="4"/>
 <connect gate="G$1" pin="EN" pad="3"/>
 <connect gate="G$1" pin="GND" pad="2"/>
 <connect gate="G$1" pin="IN" pad="1"/>
+<connect gate="G$1" pin="NC" pad="4"/>
 <connect gate="G$1" pin="OUT" pad="5"/>
 </connects>
 <technologies>
 <technology name="">
-<attribute name="PROD_ID" value="VREG-09872"/>
-<attribute name="VALUE" value="MIC5219 3.3V" constant="no"/>
-</technology>
-</technologies>
-</device>
-<device name="5V" package="SOT23-5">
-<connects>
-<connect gate="G$1" pin="BP" pad="4"/>
-<connect gate="G$1" pin="EN" pad="3"/>
-<connect gate="G$1" pin="GND" pad="2"/>
-<connect gate="G$1" pin="IN" pad="1"/>
-<connect gate="G$1" pin="OUT" pad="5"/>
-</connects>
-<technologies>
-<technology name="">
-<attribute name="PROD_ID" value="VREG-10107"/>
-<attribute name="VALUE" value="MIC5219 5V" constant="no"/>
+<attribute name="PROD_ID" value="VREG-12457"/>
+<attribute name="VALUE" value="3.3V"/>
 </technology>
 </technologies>
 </device>
@@ -19341,7 +19345,7 @@ CY7C65213 USB-UART controller.</description>
 <part name="FRAME1" library="SparkFun-Aesthetics" deviceset="FRAME-LETTER" device=""/>
 <part name="R1" library="SparkFun-Resistors" deviceset="0.27OHM-1/10W-1%(0603)" device="" value="0.27"/>
 <part name="C1" library="SparkFun-Capacitors" deviceset="2.2UF-10V-20%(0603)" device="" value="2.2uF"/>
-<part name="U2" library="SparkFun-PowerIC" deviceset="V_REG_MIC5219" device="3.3V" value="MIC5219 3.3V"/>
+<part name="U2" library="SparkFun-PowerIC" deviceset="V_REG_AP2112" device="K-3.3V" value="3.3V"/>
 <part name="J1" library="SparkFun-Connectors" deviceset="USB_MICROB_PLUG" device="CONN-11752" value="MICROB"/>
 <part name="J2" library="SparkFun-Connectors" deviceset="M02" device="PTH"/>
 <part name="J3" library="SparkFun-Connectors" deviceset="FTDI_BASIC" device="PTH"/>
@@ -19399,13 +19403,27 @@ CY7C65213 USB-UART controller.</description>
 <part name="C6" library="SparkFun-Capacitors" deviceset="4.7UF-16V-20%,+80%-(1206)" device="" value="4.7uF"/>
 <part name="SUPPLY23" library="SparkFun-Aesthetics" deviceset="VCCIO" device=""/>
 <part name="LOGO2" library="SparkFun-Aesthetics" deviceset="OSHW-LOGO" device="S"/>
-<part name="R5" library="SparkFun-Resistors" deviceset="10KOHM-1/10W-1%(0603)" device="0603" value="10K"/>
 <part name="SUPPLY24" library="SparkFun-Aesthetics" deviceset="VCCIO" device=""/>
+<part name="SUPPLY25" library="SparkFun-Aesthetics" deviceset="VCCIO" device=""/>
+<part name="SUPPLY26" library="SparkFun-Aesthetics" deviceset="VCCIO" device=""/>
+<part name="R5" library="SparkFun-Resistors" deviceset="10KOHM-1/10W-1%(0603)" device="0603" value="10K"/>
+<part name="R6" library="SparkFun-Resistors" deviceset="10KOHM-1/10W-1%(0603)" device="0603" value="10K"/>
+<part name="R7" library="SparkFun-Resistors" deviceset="10KOHM-1/10W-1%(0603)" device="0603" value="10K"/>
+<part name="R8" library="SparkFun-Resistors" deviceset="10KOHM-1/10W-1%(0603)" device="0603" value="10K"/>
+<part name="R9" library="SparkFun-Resistors" deviceset="10KOHM-1/10W-1%(0603)" device="0603" value="10K"/>
+<part name="R10" library="SparkFun-Resistors" deviceset="10KOHM-1/10W-1%(0603)" device="0603" value="10K"/>
+<part name="R11" library="SparkFun-Resistors" deviceset="10KOHM-1/10W-1%(0603)" device="0603" value="10K"/>
+<part name="R12" library="SparkFun-Resistors" deviceset="10KOHM-1/10W-1%(0603)" device="0603" value="10K"/>
+<part name="R13" library="SparkFun-Resistors" deviceset="10KOHM-1/10W-1%(0603)" device="0603" value="10K"/>
+<part name="R14" library="SparkFun-Resistors" deviceset="10KOHM-1/10W-1%(0603)" device="0603" value="10K"/>
+<part name="R15" library="SparkFun-Resistors" deviceset="10KOHM-1/10W-1%(0603)" device="0603" value="10K"/>
+<part name="FD3" library="SparkFun-Aesthetics" deviceset="FIDUCIAL" device="UFIDUCIAL"/>
+<part name="FD4" library="SparkFun-Aesthetics" deviceset="FIDUCIAL" device="UFIDUCIAL"/>
 </parts>
 <sheets>
 <sheet>
 <plain>
-<text x="237.998" y="6.35" size="3.81" layer="94" font="vector">02</text>
+<text x="237.998" y="6.35" size="3.81" layer="94" font="vector">03</text>
 <text x="154.432" y="6.096" size="3.81" layer="94" font="vector">Mike Hord</text>
 <text x="27.94" y="95.25" size="1.27" layer="97" font="vector">Open JP1 if VIO used 
 to set VCCIO; close JP2
@@ -19419,7 +19437,7 @@ See sfe.io/t481</text>
 and Distribution</text>
 <text x="73.66" y="101.6" size="3.81" layer="97" font="vector">Connectors</text>
 <text x="73.66" y="109.22" size="3.81" layer="97" font="vector">CY7C65213</text>
-<text x="208.28" y="142.24" size="1.27" layer="97" font="vector">D3 clamps DTR voltage to
+<text x="208.28" y="157.48" size="1.27" layer="97" font="vector">D3 clamps DTR voltage to
 VCCIO during Arduino
 programming. This chip is
 particularly susceptible to
@@ -19428,9 +19446,6 @@ latchup events.</text>
 Use of battery charger
 may cause spikes on 
 5V line.</text>
-<text x="213.36" y="124.46" size="1.27" layer="97" font="vector">Without R5, the RX line tends
-to drift through VIH/VIL 
-and collect spurious data.</text>
 </plain>
 <instances>
 <instance part="FRAME1" gate="G$1" x="0" y="0"/>
@@ -19482,11 +19497,11 @@ and collect spurious data.</text>
 <instance part="SUPPLY20" gate="G$1" x="182.88" y="81.28"/>
 <instance part="J5" gate="G$1" x="165.1" y="71.12"/>
 <instance part="GND6" gate="1" x="190.5" y="71.12"/>
-<instance part="D3" gate="G$1" x="213.36" y="160.02" smashed="yes" rot="R180">
-<attribute name="NAME" x="210.82" y="155.4226" size="1.778" layer="95"/>
-<attribute name="VALUE" x="210.82" y="152.6286" size="1.778" layer="96"/>
+<instance part="D3" gate="G$1" x="213.36" y="175.26" smashed="yes" rot="R180">
+<attribute name="NAME" x="210.82" y="170.6626" size="1.778" layer="95"/>
+<attribute name="VALUE" x="210.82" y="167.8686" size="1.778" layer="96"/>
 </instance>
-<instance part="SUPPLY21" gate="G$1" x="208.28" y="162.56"/>
+<instance part="SUPPLY21" gate="G$1" x="208.28" y="177.8"/>
 <instance part="GND7" gate="1" x="213.36" y="50.8"/>
 <instance part="SUPPLY22" gate="G$1" x="218.44" y="63.5"/>
 <instance part="U1" gate="G$1" x="121.92" y="127"/>
@@ -19505,8 +19520,28 @@ and collect spurious data.</text>
 <instance part="C6" gate="G$1" x="60.96" y="147.32"/>
 <instance part="SUPPLY23" gate="G$1" x="50.8" y="160.02"/>
 <instance part="LOGO2" gate="G$1" x="132.08" y="10.16"/>
-<instance part="R5" gate="G$1" x="208.28" y="124.46" rot="R90"/>
-<instance part="SUPPLY24" gate="G$1" x="208.28" y="132.08"/>
+<instance part="SUPPLY24" gate="G$1" x="246.38" y="137.16" smashed="yes">
+<attribute name="VALUE" x="240.284" y="140.716" size="1.778" layer="96"/>
+</instance>
+<instance part="SUPPLY25" gate="G$1" x="220.98" y="137.16" smashed="yes">
+<attribute name="VALUE" x="214.884" y="140.716" size="1.778" layer="96"/>
+</instance>
+<instance part="SUPPLY26" gate="G$1" x="195.58" y="137.16" smashed="yes">
+<attribute name="VALUE" x="189.484" y="140.716" size="1.778" layer="96"/>
+</instance>
+<instance part="R5" gate="G$1" x="238.76" y="111.76"/>
+<instance part="R6" gate="G$1" x="238.76" y="119.38"/>
+<instance part="R7" gate="G$1" x="238.76" y="127"/>
+<instance part="R8" gate="G$1" x="238.76" y="134.62"/>
+<instance part="R9" gate="G$1" x="213.36" y="111.76"/>
+<instance part="R10" gate="G$1" x="213.36" y="119.38"/>
+<instance part="R11" gate="G$1" x="213.36" y="127"/>
+<instance part="R12" gate="G$1" x="213.36" y="134.62"/>
+<instance part="R13" gate="G$1" x="187.96" y="111.76"/>
+<instance part="R14" gate="G$1" x="187.96" y="119.38"/>
+<instance part="R15" gate="G$1" x="187.96" y="127"/>
+<instance part="FD3" gate="G$1" x="243.84" y="27.94"/>
+<instance part="FD4" gate="G$1" x="246.38" y="27.94"/>
 </instances>
 <busses>
 </busses>
@@ -19683,9 +19718,9 @@ and collect spurious data.</text>
 </segment>
 <segment>
 <pinref part="SUPPLY21" gate="G$1" pin="VCCIO"/>
-<wire x1="208.28" y1="162.56" x2="208.28" y2="160.02" width="0.1524" layer="91"/>
+<wire x1="208.28" y1="177.8" x2="208.28" y2="175.26" width="0.1524" layer="91"/>
 <pinref part="D3" gate="G$1" pin="C"/>
-<wire x1="208.28" y1="160.02" x2="210.82" y2="160.02" width="0.1524" layer="91"/>
+<wire x1="208.28" y1="175.26" x2="210.82" y2="175.26" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="J3" gate="G$1" pin="4"/>
@@ -19704,9 +19739,54 @@ and collect spurious data.</text>
 <junction x="50.8" y="157.48"/>
 </segment>
 <segment>
+<wire x1="243.84" y1="111.76" x2="246.38" y2="111.76" width="0.1524" layer="91"/>
+<wire x1="246.38" y1="111.76" x2="246.38" y2="119.38" width="0.1524" layer="91"/>
+<wire x1="246.38" y1="119.38" x2="246.38" y2="127" width="0.1524" layer="91"/>
+<wire x1="246.38" y1="127" x2="246.38" y2="134.62" width="0.1524" layer="91"/>
+<wire x1="246.38" y1="134.62" x2="246.38" y2="137.16" width="0.1524" layer="91"/>
+<wire x1="243.84" y1="134.62" x2="246.38" y2="134.62" width="0.1524" layer="91"/>
+<junction x="246.38" y="134.62"/>
+<wire x1="243.84" y1="127" x2="246.38" y2="127" width="0.1524" layer="91"/>
+<junction x="246.38" y="127"/>
+<wire x1="243.84" y1="119.38" x2="246.38" y2="119.38" width="0.1524" layer="91"/>
+<junction x="246.38" y="119.38"/>
 <pinref part="SUPPLY24" gate="G$1" pin="VCCIO"/>
 <pinref part="R5" gate="G$1" pin="2"/>
-<wire x1="208.28" y1="132.08" x2="208.28" y2="129.54" width="0.1524" layer="91"/>
+<pinref part="R6" gate="G$1" pin="2"/>
+<pinref part="R7" gate="G$1" pin="2"/>
+<pinref part="R8" gate="G$1" pin="2"/>
+</segment>
+<segment>
+<pinref part="SUPPLY26" gate="G$1" pin="VCCIO"/>
+<wire x1="193.04" y1="127" x2="195.58" y2="127" width="0.1524" layer="91"/>
+<wire x1="195.58" y1="127" x2="195.58" y2="137.16" width="0.1524" layer="91"/>
+<wire x1="193.04" y1="119.38" x2="195.58" y2="119.38" width="0.1524" layer="91"/>
+<wire x1="195.58" y1="119.38" x2="195.58" y2="127" width="0.1524" layer="91"/>
+<junction x="195.58" y="127"/>
+<wire x1="193.04" y1="111.76" x2="195.58" y2="111.76" width="0.1524" layer="91"/>
+<wire x1="195.58" y1="111.76" x2="195.58" y2="119.38" width="0.1524" layer="91"/>
+<junction x="195.58" y="119.38"/>
+<pinref part="R13" gate="G$1" pin="2"/>
+<pinref part="R14" gate="G$1" pin="2"/>
+<pinref part="R15" gate="G$1" pin="2"/>
+</segment>
+<segment>
+<pinref part="SUPPLY25" gate="G$1" pin="VCCIO"/>
+<wire x1="218.44" y1="111.76" x2="220.98" y2="111.76" width="0.1524" layer="91"/>
+<wire x1="220.98" y1="111.76" x2="220.98" y2="119.38" width="0.1524" layer="91"/>
+<wire x1="220.98" y1="119.38" x2="220.98" y2="127" width="0.1524" layer="91"/>
+<wire x1="220.98" y1="127" x2="220.98" y2="134.62" width="0.1524" layer="91"/>
+<wire x1="220.98" y1="134.62" x2="220.98" y2="137.16" width="0.1524" layer="91"/>
+<wire x1="218.44" y1="134.62" x2="220.98" y2="134.62" width="0.1524" layer="91"/>
+<junction x="220.98" y="134.62"/>
+<wire x1="218.44" y1="127" x2="220.98" y2="127" width="0.1524" layer="91"/>
+<junction x="220.98" y="127"/>
+<wire x1="218.44" y1="119.38" x2="220.98" y2="119.38" width="0.1524" layer="91"/>
+<junction x="220.98" y="119.38"/>
+<pinref part="R9" gate="G$1" pin="2"/>
+<pinref part="R10" gate="G$1" pin="2"/>
+<pinref part="R11" gate="G$1" pin="2"/>
+<pinref part="R12" gate="G$1" pin="2"/>
 </segment>
 </net>
 <net name="GPIO6" class="0">
@@ -19720,6 +19800,11 @@ and collect spurious data.</text>
 <wire x1="175.26" y1="71.12" x2="177.8" y2="71.12" width="0.1524" layer="91"/>
 <label x="177.8" y="71.12" size="1.27" layer="95" font="vector" xref="yes"/>
 </segment>
+<segment>
+<pinref part="R9" gate="G$1" pin="1"/>
+<wire x1="208.28" y1="111.76" x2="205.74" y2="111.76" width="0.1524" layer="91"/>
+<label x="205.74" y="111.76" size="1.27" layer="95" rot="R180" xref="yes"/>
+</segment>
 </net>
 <net name="GPIO7" class="0">
 <segment>
@@ -19731,6 +19816,11 @@ and collect spurious data.</text>
 <pinref part="J5" gate="G$1" pin="8"/>
 <wire x1="175.26" y1="73.66" x2="177.8" y2="73.66" width="0.1524" layer="91"/>
 <label x="177.8" y="73.66" size="1.27" layer="95" font="vector" xref="yes"/>
+</segment>
+<segment>
+<pinref part="R10" gate="G$1" pin="1"/>
+<wire x1="208.28" y1="119.38" x2="205.74" y2="119.38" width="0.1524" layer="91"/>
+<label x="205.74" y="119.38" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
 <net name="D-" class="0">
@@ -19870,6 +19960,11 @@ and collect spurious data.</text>
 <wire x1="175.26" y1="63.5" x2="177.8" y2="63.5" width="0.1524" layer="91"/>
 <label x="177.8" y="63.5" size="1.27" layer="95" font="vector" xref="yes"/>
 </segment>
+<segment>
+<wire x1="233.68" y1="119.38" x2="231.14" y2="119.38" width="0.1524" layer="91"/>
+<label x="231.14" y="119.38" size="1.27" layer="95" rot="R180" xref="yes"/>
+<pinref part="R6" gate="G$1" pin="1"/>
+</segment>
 </net>
 <net name="GPIO2" class="0">
 <segment>
@@ -19881,6 +19976,11 @@ and collect spurious data.</text>
 <pinref part="J5" gate="G$1" pin="3"/>
 <wire x1="175.26" y1="60.96" x2="177.8" y2="60.96" width="0.1524" layer="91"/>
 <label x="177.8" y="60.96" size="1.27" layer="95" font="vector" xref="yes"/>
+</segment>
+<segment>
+<wire x1="233.68" y1="111.76" x2="231.14" y2="111.76" width="0.1524" layer="91"/>
+<label x="231.14" y="111.76" size="1.27" layer="95" rot="R180" xref="yes"/>
+<pinref part="R5" gate="G$1" pin="1"/>
 </segment>
 </net>
 <net name="GPIO4" class="0">
@@ -19894,6 +19994,11 @@ and collect spurious data.</text>
 <wire x1="175.26" y1="66.04" x2="177.8" y2="66.04" width="0.1524" layer="91"/>
 <label x="177.8" y="66.04" size="1.27" layer="95" font="vector" xref="yes"/>
 </segment>
+<segment>
+<wire x1="233.68" y1="127" x2="231.14" y2="127" width="0.1524" layer="91"/>
+<label x="231.14" y="127" size="1.27" layer="95" rot="R180" xref="yes"/>
+<pinref part="R7" gate="G$1" pin="1"/>
+</segment>
 </net>
 <net name="RI" class="0">
 <segment>
@@ -19905,6 +20010,11 @@ and collect spurious data.</text>
 <pinref part="J4" gate="G$1" pin="4"/>
 <wire x1="147.32" y1="63.5" x2="149.86" y2="63.5" width="0.1524" layer="91"/>
 <label x="149.86" y="63.5" size="1.27" layer="95" font="vector" xref="yes"/>
+</segment>
+<segment>
+<pinref part="R14" gate="G$1" pin="1"/>
+<wire x1="182.88" y1="119.38" x2="180.34" y2="119.38" width="0.1524" layer="91"/>
+<label x="180.34" y="119.38" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
 <net name="DCD" class="0">
@@ -19918,6 +20028,11 @@ and collect spurious data.</text>
 <wire x1="147.32" y1="58.42" x2="149.86" y2="58.42" width="0.1524" layer="91"/>
 <label x="149.86" y="58.42" size="1.27" layer="95" font="vector" xref="yes"/>
 </segment>
+<segment>
+<pinref part="R12" gate="G$1" pin="1"/>
+<wire x1="208.28" y1="134.62" x2="205.74" y2="134.62" width="0.1524" layer="91"/>
+<label x="205.74" y="134.62" size="1.27" layer="95" rot="R180" xref="yes"/>
+</segment>
 </net>
 <net name="DSR" class="0">
 <segment>
@@ -19929,6 +20044,11 @@ and collect spurious data.</text>
 <pinref part="J4" gate="G$1" pin="3"/>
 <wire x1="147.32" y1="60.96" x2="149.86" y2="60.96" width="0.1524" layer="91"/>
 <label x="149.86" y="60.96" size="1.27" layer="95" font="vector" xref="yes"/>
+</segment>
+<segment>
+<pinref part="R13" gate="G$1" pin="1"/>
+<wire x1="182.88" y1="111.76" x2="180.34" y2="111.76" width="0.1524" layer="91"/>
+<label x="180.34" y="111.76" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
 <net name="DTR" class="0">
@@ -19944,8 +20064,8 @@ and collect spurious data.</text>
 </segment>
 <segment>
 <pinref part="D3" gate="G$1" pin="A"/>
-<wire x1="215.9" y1="160.02" x2="218.44" y2="160.02" width="0.1524" layer="91"/>
-<label x="218.44" y="160.02" size="1.27" layer="95" font="vector" xref="yes"/>
+<wire x1="215.9" y1="175.26" x2="218.44" y2="175.26" width="0.1524" layer="91"/>
+<label x="218.44" y="175.26" size="1.27" layer="95" font="vector" xref="yes"/>
 </segment>
 <segment>
 <pinref part="J4" gate="G$1" pin="6"/>
@@ -19980,6 +20100,11 @@ and collect spurious data.</text>
 <pinref part="J4" gate="G$1" pin="1"/>
 <wire x1="147.32" y1="55.88" x2="149.86" y2="55.88" width="0.1524" layer="91"/>
 <label x="149.86" y="55.88" size="1.27" layer="95" font="vector" xref="yes"/>
+</segment>
+<segment>
+<pinref part="R11" gate="G$1" pin="1"/>
+<wire x1="208.28" y1="127" x2="205.74" y2="127" width="0.1524" layer="91"/>
+<label x="205.74" y="127" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
 <net name="TXD" class="0">
@@ -20016,10 +20141,9 @@ and collect spurious data.</text>
 <label x="210.82" y="66.04" size="1.27" layer="95" font="vector" rot="MR180" xref="yes"/>
 </segment>
 <segment>
-<pinref part="R5" gate="G$1" pin="1"/>
-<wire x1="208.28" y1="119.38" x2="208.28" y2="116.84" width="0.1524" layer="91"/>
-<wire x1="208.28" y1="116.84" x2="213.36" y2="116.84" width="0.1524" layer="91"/>
-<label x="213.36" y="116.84" size="1.27" layer="95" xref="yes"/>
+<pinref part="R15" gate="G$1" pin="1"/>
+<wire x1="182.88" y1="127" x2="180.34" y2="127" width="0.1524" layer="91"/>
+<label x="180.34" y="127" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
 <net name="GPIO5" class="0">
@@ -20032,6 +20156,11 @@ and collect spurious data.</text>
 <pinref part="U1" gate="G$1" pin="GPIO5"/>
 <wire x1="147.32" y1="129.54" x2="149.86" y2="129.54" width="0.1524" layer="91" style="longdash"/>
 <label x="149.86" y="129.54" size="1.27" layer="95" font="vector" xref="yes"/>
+</segment>
+<segment>
+<wire x1="233.68" y1="134.62" x2="231.14" y2="134.62" width="0.1524" layer="91"/>
+<label x="231.14" y="134.62" size="1.27" layer="95" rot="R180" xref="yes"/>
+<pinref part="R8" gate="G$1" pin="1"/>
 </segment>
 </net>
 <net name="5V_CLAMPED" class="0">
@@ -20066,6 +20195,12 @@ and collect spurious data.</text>
 <wire x1="30.48" y1="157.48" x2="40.64" y2="157.48" width="0.1524" layer="91"/>
 <wire x1="40.64" y1="157.48" x2="40.64" y2="152.4" width="0.1524" layer="91"/>
 <junction x="30.48" y="157.48"/>
+</segment>
+</net>
+<net name="N$4" class="0">
+<segment>
+<pinref part="J1" gate="G$1" pin="ID"/>
+<wire x1="106.68" y1="66.04" x2="109.22" y2="66.04" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>
