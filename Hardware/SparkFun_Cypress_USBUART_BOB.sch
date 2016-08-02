@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="7.5.0">
+<eagle version="7.6.0">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -152,7 +152,7 @@
 <layer number="254" name="cooling" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="255" name="routoute" color="7" fill="1" visible="yes" active="yes"/>
 </layers>
-<schematic xreflabel="%F%N/%S" xrefpart="/%S.%C%R">
+<schematic xreflabel="%F%N/%S" xrefpart="1_/%S.%C%R">
 <libraries>
 <library name="SparkFun-Aesthetics">
 <description>&lt;h3&gt;SparkFun Electronics' preferred foot prints&lt;/h3&gt;
@@ -19423,7 +19423,7 @@ CY7C65213 USB-UART controller.</description>
 <sheets>
 <sheet>
 <plain>
-<text x="237.998" y="6.35" size="3.81" layer="94" font="vector">03</text>
+<text x="237.998" y="6.35" size="3.81" layer="94" font="vector">10</text>
 <text x="154.432" y="6.096" size="3.81" layer="94" font="vector">Mike Hord</text>
 <text x="27.94" y="95.25" size="1.27" layer="97" font="vector">Open JP1 if VIO used 
 to set VCCIO; close JP2
