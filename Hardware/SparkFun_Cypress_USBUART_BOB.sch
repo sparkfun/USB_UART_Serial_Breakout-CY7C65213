@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="7.5.0">
+<eagle version="7.6.0">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -152,7 +152,7 @@
 <layer number="254" name="cooling" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="255" name="routoute" color="7" fill="1" visible="yes" active="yes"/>
 </layers>
-<schematic xreflabel="%F%N/%S" xrefpart="/%S.%C%R">
+<schematic xreflabel="%F%N/%S" xrefpart="1_/%S.%C%R">
 <libraries>
 <library name="SparkFun-Aesthetics">
 <description>&lt;h3&gt;SparkFun Electronics' preferred foot prints&lt;/h3&gt;
@@ -16457,25 +16457,6 @@ You are welcome to use this library for commercial purposes. For attribution, we
 </device>
 </devices>
 </deviceset>
-<deviceset name="15OHM-1/10W-1%(0603)" prefix="R">
-<gates>
-<gate name="G$1" symbol="RESISTOR" x="0" y="0"/>
-</gates>
-<devices>
-<device name="0603" package="0603-RES">
-<connects>
-<connect gate="G$1" pin="1" pad="1"/>
-<connect gate="G$1" pin="2" pad="2"/>
-</connects>
-<technologies>
-<technology name="">
-<attribute name="PROD_ID" value="RES-12570" constant="no"/>
-<attribute name="VALUE" value="15" constant="no"/>
-</technology>
-</technologies>
-</device>
-</devices>
-</deviceset>
 </devicesets>
 </library>
 <library name="SparkFun-Capacitors">
@@ -19355,7 +19336,6 @@ CY7C65213 USB-UART controller.</description>
 <part name="GND1" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
 <part name="C2" library="SparkFun-Capacitors" deviceset="1.0UF-16V-10%(0603)" device="" value="1.0uF"/>
 <part name="SUPPLY3" library="SparkFun-Aesthetics" deviceset="VDD" device=""/>
-<part name="5V_CLAMPED" library="SparkFun-Aesthetics" deviceset="5V" device="" value="5V_CLAMPED"/>
 <part name="SUPPLY5" library="SparkFun-Aesthetics" deviceset="VCCIO" device=""/>
 <part name="SUPPLY6" library="SparkFun-Aesthetics" deviceset="VDD" device=""/>
 <part name="SUPPLY7" library="SparkFun-Aesthetics" deviceset="5V" device=""/>
@@ -19368,7 +19348,6 @@ CY7C65213 USB-UART controller.</description>
 <part name="SUPPLY11" library="SparkFun-Aesthetics" deviceset="3.3V" device=""/>
 <part name="GND4" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
 <part name="SUPPLY10" library="SparkFun-Aesthetics" deviceset="VCCIO" device=""/>
-<part name="SUPPLY12" library="SparkFun-Aesthetics" deviceset="5V" device="" value="5V_CLAMPED"/>
 <part name="SUPPLY13" library="SparkFun-Aesthetics" deviceset="3.3V" device=""/>
 <part name="JP2" library="SparkFun-Passives" deviceset="JUMPER-PAD-2-NO" device="YES_SILK"/>
 <part name="SUPPLY14" library="SparkFun-Aesthetics" deviceset="VDD" device=""/>
@@ -19391,13 +19370,10 @@ CY7C65213 USB-UART controller.</description>
 <part name="FD1" library="SparkFun-Aesthetics" deviceset="FIDUCIAL" device="UFIDUCIAL"/>
 <part name="FD2" library="SparkFun-Aesthetics" deviceset="FIDUCIAL" device="UFIDUCIAL"/>
 <part name="D4" library="SparkFun-DiscreteSemi" deviceset="DIODE-ZENER" device="5.6V" value="5.6V"/>
-<part name="R2" library="SparkFun-Resistors" deviceset="15OHM-1/10W-1%(0603)" device="0603" value="15"/>
 <part name="SUPPLY4" library="SparkFun-Aesthetics" deviceset="5V" device=""/>
-<part name="5V_CLAMPED1" library="SparkFun-Aesthetics" deviceset="5V" device="" value="5V_CLAMPED"/>
 <part name="GND8" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
 <part name="C3" library="SparkFun-Capacitors" deviceset="0.1UF-25V-5%(0603)" device="" value="0.1uF"/>
 <part name="C4" library="SparkFun-Capacitors" deviceset="4.7UF-16V-20%,+80%-(1206)" device="" value="4.7uF"/>
-<part name="SUPPLY9" library="SparkFun-Aesthetics" deviceset="5V" device="" value="5V_CLAMPED"/>
 <part name="C5" library="SparkFun-Capacitors" deviceset="0.1UF-25V-5%(0603)" device="" value="0.1uF"/>
 <part name="C6" library="SparkFun-Capacitors" deviceset="4.7UF-16V-20%,+80%-(1206)" device="" value="4.7uF"/>
 <part name="SUPPLY23" library="SparkFun-Aesthetics" deviceset="VCCIO" device=""/>
@@ -19407,6 +19383,9 @@ CY7C65213 USB-UART controller.</description>
 <part name="D5" library="SparkFun-DiscreteSemi" deviceset="DIODE-SCHOTTKY" device="-PMEG4005EJ" value="PMEG4005EJ"/>
 <part name="C8" library="SparkFun-Capacitors" deviceset="10PF-50V-5%(0603)" device="" value="10pF"/>
 <part name="SUPPLY21" library="SparkFun-Aesthetics" deviceset="VCCIO" device=""/>
+<part name="SUPPLY9" library="SparkFun-Aesthetics" deviceset="5V" device=""/>
+<part name="SUPPLY12" library="SparkFun-Aesthetics" deviceset="5V" device=""/>
+<part name="SUPPLY24" library="SparkFun-Aesthetics" deviceset="5V" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -19455,7 +19434,6 @@ may cause spikes on
 <instance part="GND1" gate="1" x="111.76" y="58.42"/>
 <instance part="C2" gate="G$1" x="7.62" y="147.32"/>
 <instance part="SUPPLY3" gate="VDD" x="101.6" y="172.72"/>
-<instance part="5V_CLAMPED" gate="G$1" x="99.06" y="175.26"/>
 <instance part="SUPPLY5" gate="G$1" x="104.14" y="170.18"/>
 <instance part="SUPPLY6" gate="VDD" x="7.62" y="160.02"/>
 <instance part="SUPPLY7" gate="G$1" x="22.86" y="83.82"/>
@@ -19468,7 +19446,6 @@ may cause spikes on
 <instance part="SUPPLY11" gate="G$1" x="45.72" y="83.82"/>
 <instance part="GND4" gate="1" x="22.86" y="63.5"/>
 <instance part="SUPPLY10" gate="G$1" x="33.02" y="109.22"/>
-<instance part="SUPPLY12" gate="G$1" x="17.78" y="116.84"/>
 <instance part="SUPPLY13" gate="G$1" x="25.4" y="114.3"/>
 <instance part="JP2" gate="G$1" x="40.64" y="106.68" smashed="yes">
 <attribute name="NAME" x="38.1" y="109.22" size="1.778" layer="95"/>
@@ -19496,13 +19473,10 @@ may cause spikes on
 <instance part="FD1" gate="G$1" x="246.38" y="25.4"/>
 <instance part="FD2" gate="G$1" x="243.84" y="25.4"/>
 <instance part="D4" gate="G$1" x="43.18" y="35.56" rot="R90"/>
-<instance part="R2" gate="G$1" x="33.02" y="43.18"/>
-<instance part="SUPPLY4" gate="G$1" x="20.32" y="45.72"/>
-<instance part="5V_CLAMPED1" gate="G$1" x="43.18" y="45.72"/>
+<instance part="SUPPLY4" gate="G$1" x="43.18" y="45.72"/>
 <instance part="GND8" gate="1" x="43.18" y="27.94"/>
 <instance part="C3" gate="G$1" x="30.48" y="147.32"/>
 <instance part="C4" gate="G$1" x="40.64" y="147.32"/>
-<instance part="SUPPLY9" gate="G$1" x="30.48" y="160.02"/>
 <instance part="C5" gate="G$1" x="50.8" y="147.32"/>
 <instance part="C6" gate="G$1" x="60.96" y="147.32"/>
 <instance part="SUPPLY23" gate="G$1" x="50.8" y="160.02"/>
@@ -19521,6 +19495,9 @@ may cause spikes on
 <attribute name="VALUE" x="220.98" y="161.925" size="1.778" layer="96" rot="R180"/>
 </instance>
 <instance part="SUPPLY21" gate="G$1" x="228.6" y="165.1"/>
+<instance part="SUPPLY9" gate="G$1" x="99.06" y="175.26"/>
+<instance part="SUPPLY12" gate="G$1" x="30.48" y="160.02"/>
+<instance part="SUPPLY24" gate="G$1" x="17.78" y="116.84"/>
 </instances>
 <busses>
 </busses>
@@ -19642,10 +19619,32 @@ may cause spikes on
 <wire x1="177.8" y1="83.82" x2="177.8" y2="86.36" width="0.1524" layer="91"/>
 </segment>
 <segment>
+<wire x1="116.84" y1="160.02" x2="99.06" y2="160.02" width="0.1524" layer="91"/>
+<wire x1="99.06" y1="160.02" x2="99.06" y2="175.26" width="0.1524" layer="91"/>
+<pinref part="U1" gate="G$1" pin="VCC"/>
+<pinref part="SUPPLY9" gate="G$1" pin="5V"/>
+</segment>
+<segment>
+<pinref part="C3" gate="G$1" pin="1"/>
+<wire x1="30.48" y1="160.02" x2="30.48" y2="157.48" width="0.1524" layer="91"/>
+<pinref part="C4" gate="G$1" pin="1"/>
+<wire x1="30.48" y1="157.48" x2="30.48" y2="152.4" width="0.1524" layer="91"/>
+<wire x1="30.48" y1="157.48" x2="40.64" y2="157.48" width="0.1524" layer="91"/>
+<wire x1="40.64" y1="157.48" x2="40.64" y2="152.4" width="0.1524" layer="91"/>
+<junction x="30.48" y="157.48"/>
+<pinref part="SUPPLY12" gate="G$1" pin="5V"/>
+</segment>
+<segment>
+<wire x1="17.78" y1="116.84" x2="17.78" y2="99.06" width="0.1524" layer="91"/>
+<pinref part="JP1" gate="G$1" pin="3"/>
+<wire x1="17.78" y1="99.06" x2="25.4" y2="99.06" width="0.1524" layer="91"/>
+<wire x1="25.4" y1="99.06" x2="25.4" y2="101.6" width="0.1524" layer="91"/>
+<pinref part="SUPPLY24" gate="G$1" pin="5V"/>
+</segment>
+<segment>
+<pinref part="D4" gate="G$1" pin="C"/>
+<wire x1="43.18" y1="38.1" x2="43.18" y2="45.72" width="0.1524" layer="91" style="longdash"/>
 <pinref part="SUPPLY4" gate="G$1" pin="5V"/>
-<wire x1="20.32" y1="45.72" x2="20.32" y2="43.18" width="0.1524" layer="91" style="longdash"/>
-<pinref part="R2" gate="G$1" pin="1"/>
-<wire x1="20.32" y1="43.18" x2="27.94" y2="43.18" width="0.1524" layer="91" style="longdash"/>
 </segment>
 </net>
 <net name="VDD" class="0">
@@ -20062,40 +20061,6 @@ may cause spikes on
 <pinref part="U1" gate="G$1" pin="GPIO5"/>
 <wire x1="147.32" y1="129.54" x2="149.86" y2="129.54" width="0.1524" layer="91" style="longdash"/>
 <label x="149.86" y="129.54" size="1.27" layer="95" font="vector" xref="yes"/>
-</segment>
-</net>
-<net name="5V_CLAMPED" class="0">
-<segment>
-<pinref part="5V_CLAMPED" gate="G$1" pin="5V"/>
-<wire x1="116.84" y1="160.02" x2="99.06" y2="160.02" width="0.1524" layer="91"/>
-<wire x1="99.06" y1="160.02" x2="99.06" y2="175.26" width="0.1524" layer="91"/>
-<pinref part="U1" gate="G$1" pin="VCC"/>
-</segment>
-<segment>
-<pinref part="D4" gate="G$1" pin="C"/>
-<wire x1="43.18" y1="38.1" x2="43.18" y2="43.18" width="0.1524" layer="91" style="longdash"/>
-<pinref part="R2" gate="G$1" pin="2"/>
-<wire x1="43.18" y1="43.18" x2="38.1" y2="43.18" width="0.1524" layer="91" style="longdash"/>
-<pinref part="5V_CLAMPED1" gate="G$1" pin="5V"/>
-<wire x1="43.18" y1="45.72" x2="43.18" y2="43.18" width="0.1524" layer="91" style="longdash"/>
-<junction x="43.18" y="43.18"/>
-</segment>
-<segment>
-<pinref part="SUPPLY12" gate="G$1" pin="5V"/>
-<wire x1="17.78" y1="116.84" x2="17.78" y2="99.06" width="0.1524" layer="91"/>
-<pinref part="JP1" gate="G$1" pin="3"/>
-<wire x1="17.78" y1="99.06" x2="25.4" y2="99.06" width="0.1524" layer="91"/>
-<wire x1="25.4" y1="99.06" x2="25.4" y2="101.6" width="0.1524" layer="91"/>
-</segment>
-<segment>
-<pinref part="SUPPLY9" gate="G$1" pin="5V"/>
-<pinref part="C3" gate="G$1" pin="1"/>
-<wire x1="30.48" y1="160.02" x2="30.48" y2="157.48" width="0.1524" layer="91"/>
-<pinref part="C4" gate="G$1" pin="1"/>
-<wire x1="30.48" y1="157.48" x2="30.48" y2="152.4" width="0.1524" layer="91"/>
-<wire x1="30.48" y1="157.48" x2="40.64" y2="157.48" width="0.1524" layer="91"/>
-<wire x1="40.64" y1="157.48" x2="40.64" y2="152.4" width="0.1524" layer="91"/>
-<junction x="30.48" y="157.48"/>
 </segment>
 </net>
 </nets>
