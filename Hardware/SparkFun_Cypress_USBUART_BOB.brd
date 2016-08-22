@@ -17,10 +17,10 @@
 <layer number="19" name="Unrouted" color="6" fill="1" visible="yes" active="yes"/>
 <layer number="20" name="Dimension" color="15" fill="1" visible="yes" active="yes"/>
 <layer number="21" name="tPlace" color="16" fill="1" visible="yes" active="yes"/>
-<layer number="22" name="bPlace" color="14" fill="1" visible="yes" active="yes"/>
+<layer number="22" name="bPlace" color="14" fill="1" visible="no" active="yes"/>
 <layer number="23" name="tOrigins" color="15" fill="1" visible="yes" active="yes"/>
-<layer number="24" name="bOrigins" color="15" fill="1" visible="yes" active="yes"/>
-<layer number="25" name="tNames" color="7" fill="1" visible="no" active="yes"/>
+<layer number="24" name="bOrigins" color="15" fill="1" visible="no" active="yes"/>
+<layer number="25" name="tNames" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="26" name="bNames" color="7" fill="1" visible="no" active="yes"/>
 <layer number="27" name="tValues" color="7" fill="1" visible="no" active="yes"/>
 <layer number="28" name="bValues" color="7" fill="1" visible="no" active="yes"/>
@@ -34,10 +34,10 @@
 <layer number="42" name="bRestrict" color="1" fill="10" visible="no" active="yes"/>
 <layer number="43" name="vRestrict" color="2" fill="10" visible="no" active="yes"/>
 <layer number="44" name="Drills" color="7" fill="1" visible="no" active="yes"/>
-<layer number="45" name="Holes" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="45" name="Holes" color="7" fill="1" visible="no" active="yes"/>
 <layer number="46" name="Milling" color="3" fill="1" visible="no" active="yes"/>
 <layer number="47" name="Measures" color="7" fill="1" visible="no" active="yes"/>
-<layer number="51" name="tDocu" color="6" fill="1" visible="yes" active="yes"/>
+<layer number="51" name="tDocu" color="6" fill="1" visible="no" active="yes"/>
 <layer number="52" name="bDocu" color="7" fill="1" visible="no" active="yes"/>
 <layer number="3" name="Route3" color="4" fill="3" visible="no" active="no"/>
 <layer number="4" name="Route4" color="1" fill="4" visible="no" active="no"/>
@@ -2367,7 +2367,8 @@ These rules have been curated by SparkFuns DFM commitee. After doing much resear
 <wire x1="22.736" y1="11.173" x2="22.987" y2="10.922" width="0.254" layer="1"/>
 <wire x1="22.736" y1="11.173" x2="20.958" y2="11.173" width="0.254" layer="1"/>
 <wire x1="20.958" y1="11.173" x2="20.701" y2="11.43" width="0.254" layer="1"/>
-<wire x1="20.701" y1="11.43" x2="20.701" y2="13.208" width="0.254" layer="1"/>
+<wire x1="20.701" y1="11.43" x2="20.701" y2="12.7" width="0.254" layer="1"/>
+<wire x1="20.701" y1="12.7" x2="20.701" y2="13.208" width="0.254" layer="1"/>
 <wire x1="20.701" y1="13.208" x2="20.955" y2="13.462" width="0.254" layer="1"/>
 <wire x1="20.955" y1="13.462" x2="21.59" y2="13.462" width="0.254" layer="1"/>
 <wire x1="21.59" y1="13.462" x2="21.717" y2="13.589" width="0.254" layer="1"/>
@@ -2377,9 +2378,9 @@ These rules have been curated by SparkFuns DFM commitee. After doing much resear
 <wire x1="8.77" y1="6.35" x2="8.77" y2="7.5" width="0.254" layer="1"/>
 <wire x1="8.77" y1="7.5" x2="8.89" y2="7.62" width="0.254" layer="1"/>
 <wire x1="14.4272" y1="6.35" x2="8.77" y2="6.35" width="0.254" layer="1"/>
-<wire x1="27.645" y1="12.024" x2="27.645" y2="13.816" width="0" layer="19" extent="1-1"/>
-<wire x1="20.45" y1="14.732" x2="21.463" y2="14.732" width="0" layer="19" extent="1-1"/>
-<wire x1="19.265" y1="12.7" x2="20.701" y2="13.208" width="0" layer="19" extent="1-1"/>
+<wire x1="19.265" y1="12.7" x2="20.701" y2="12.7" width="0.254" layer="1"/>
+<wire x1="27.645" y1="13.816" x2="27.645" y2="12.024" width="0.254" layer="1"/>
+<wire x1="20.45" y1="14.732" x2="21.463" y2="14.732" width="0.254" layer="1"/>
 </signal>
 <signal name="VDD">
 <contactref element="C2" pad="1"/>
@@ -2895,8 +2896,8 @@ These rules have been curated by SparkFuns DFM commitee. After doing much resear
 <approved hash="19,1,78755ab7643a46f8"/>
 <approved hash="19,1,78855a475c3a7ef8"/>
 <approved hash="19,1,e49a4658447ee6bc"/>
-<approved hash="4,1,7ad293eaa0289177"/>
 <approved hash="4,1,46cc4db74801ef7d"/>
+<approved hash="4,1,7ad293eaa0289177"/>
 </errors>
 </board>
 </drawing>
