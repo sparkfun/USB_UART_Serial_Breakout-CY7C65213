@@ -1,19 +1,18 @@
-Purpletooth Jamboree Development Board
+SparkFun USB UART Serial Breakout - CY7C65213
 ==================
 
-Audio support board for the BC127 module from BlueCreation.
 
-[![Purpletooth Jamboree Development Board](https://dlnmh9ip6v2uc.cloudfront.net/images/products/1/1/9/2/4/11924-01_medium.jpg)  
-*Purpletooth Jamboree Development Board*](https://www.sparkfun.com/products/11924)
+![SparkFun USB UART Serial Breakout - CY7C65213](https://cdn.sparkfun.com//assets/parts/1/1/4/2/7/13830-01.jpg)  
 
-Design files and firmware files for the [Purpletooth Jamboree Development Board](https://www.sparkfun.com/products/11924).
+[*SparkFun USB UART Serial Breakout - CY7C65213*](https://www.sparkfun.com/products/13830)
+
+The CY7C65213 USB to UART serial breakout is designed to provide users with a means to access all available I/O pins on the IC, and to provide a 6-pin UART header that is compatible with other SparkFun breakout boards. This breakout has a microUSB connector and other support circuitry to get the IC quickly up and running.
+
 
 Repository Contents
 -------------------
 
-* **/fritzing** - Fritzing components for this board
 * **/hardware** - Eagle PCB layout files
-* **/Libraries** - Library files for various platforms
 * **/Production** - Files to support SparkFun production
 
 License Information
