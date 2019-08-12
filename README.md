@@ -2,7 +2,7 @@ SparkFun USB UART Serial Breakout - CY7C65213
 ==================
 
 
-![SparkFun USB UART Serial Breakout - CY7C65213](https://cdn.sparkfun.com//assets/parts/1/1/4/2/7/13830-01.jpg)  
+[![SparkFun USB UART Serial Breakout - CY7C65213](https://cdn.sparkfun.com//assets/parts/1/1/4/2/7/13830-01.jpg)](https://www.sparkfun.com/products/13830)
 
 [*SparkFun USB UART Serial Breakout - CY7C65213*](https://www.sparkfun.com/products/13830)
 
@@ -14,6 +14,11 @@ Repository Contents
 
 * **/hardware** - Eagle PCB layout files
 * **/Production** - Files to support SparkFun production
+
+Documentation
+-------------------
+
+[Hookup Guide](https://learn.sparkfun.com/tutorials/sparkfun-usb-uart-breakout-cy7c65213-hookup-guide) - Basic hookup guide
 
 License Information
 -------------------
